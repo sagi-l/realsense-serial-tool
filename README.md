@@ -40,7 +40,7 @@ This repository contains:
 ## Quick Start
 
 # 1) Clone this repository
-git clone <YOUR_REPO_URL> realsense-serial-tool
+git clone https://github.com/sagi-l/realsense-serial-tool.git
 cd realsense-serial-tool
 
 # 2) Make the host-side script executable
