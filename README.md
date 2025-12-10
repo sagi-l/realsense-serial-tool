@@ -39,22 +39,22 @@ This repository contains:
 
 ## Quick Start
 
-# 1) Clone this repository
+1) Clone this repository
 git clone https://github.com/sagi-l/realsense-serial-tool.git
 cd realsense-serial-tool
 
-# 2) Make the host-side script executable
+2) Make the host-side script executable
 chmod +x order_realsense.sh
 
-# 3) Build the Docker image
+3) Build the Docker image
 sudo docker build -t realsense-serial .
 
-# 4) For each camera (one at a time):
-#    Plug in ONE camera → run:
+4) For each camera (one at a time):
+Plug in ONE camera → run:
 sudo docker run --rm --device=/dev/bus/usb:/dev/bus/usb realsense-serial
 
-#    Note the serial printed on screen and label the camera in real life.
+Note the serial printed on screen and label the camera in real life.
 
-# 5) After all cameras are labeled, get installation order:
+5) After all cameras are labeled, get installation order:
 ./order_realsense.sh
-#    Paste all serials (one per line), when you are done, press CTRL+D.
+Paste all serials (one per line), when you are done, press CTRL+D.
