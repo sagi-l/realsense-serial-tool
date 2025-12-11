@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # Run RealSense enumeration and extract only the main Serial Number (not ASIC)
+
 SERIAL=$(rs-enumerate-devices 2>/dev/null \
     | grep -i "^\s*Serial Number" \
     | awk -F':' '{print $2}' \
     | sed 's/ //g')
 
 if [ -z "$SERIAL" ]; then
-    echo "No RealSense devices detected"
+    echo "No RealSense devices detected, please connect the camera and try again"
     exit 1
 fi
 
