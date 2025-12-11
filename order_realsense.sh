@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script sorts camera serial numbers from the smallest to the largest.
+
 echo "Enter each RealSense serial number, one per line."
 echo "Press CTRL+D when finished."
 echo
@@ -12,10 +14,7 @@ if [ -z "$SERIALS" ]; then
     exit 1
 fi
 
-echo
-echo "Sorted serial numbers (smallest → largest):"
 SORTED=$(echo "$SERIALS" | sort -n)
-echo "$SORTED"
 
 echo
 echo "Installation order:"
